@@ -1,1 +1,4 @@
 assets/images/
+assets/css
+node_modules
+.sass-cache

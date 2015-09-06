@@ -1,4 +1,10 @@
 <?php
+function theme_enqueue_scripts(){
+  if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
+    wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+    wp_enqueue_script('livereload');
+  }
+}
 // Add support for featured images
 add_theme_support( 'post-thumbnails' );
 
@@ -14,7 +20,7 @@ function sidebar_widgets_init() {
     'after_title' => '</h2>',
   ) );
 }
-add_action( 'widgets_init', 'sidebar_widgets_init' );
+add_action( 'sidebar_widgets_init', 'theme_enqueue_scripts' );
 
 // Create the main navigation menu
 register_nav_menu( 'main', 'Main Menu' );
