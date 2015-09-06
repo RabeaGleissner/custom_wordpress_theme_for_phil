@@ -1,12 +1,135 @@
-.site-content {
-  h1 {
-    color: red;
-    background-color: blue;
-    border: 1px solid black;
+@import 'mixins';
+
+/* Default styles */
+* {
+  box-sizing:border-box;
+}
+html {
+  height: 100%;
+}
+a, a img {
+  transition: 0.3s;
+}
+a:hover img {
+  opacity: 0.8;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.25;
+  @include font;
+  color: black;
+  height: 100%;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 1.25rem;
+  font-weight: 100;
+  line-height: 1;
+}
+p {
+  margin: 0 0 1.25rem;
+}
+h1 { font-size: 2.8rem; }
+h2 { font-size: 1.875rem; }
+
+form p {
+  position: relative;
+}
+label {
+  display: block;
+  margin-bottom: 0.625rem;
+  color: #666;
+  font-weight: 100;
+  vertical-align: top;
+}
+label em {
+  color: #ac6f66;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  margin-bottom: 0.3125rem;
+  padding: 0.625rem;
+  border: 1px solid #ccc;
+
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: 0;
+  box-shadow: 0 0 0.625rem rgba(172, 111, 102, 0.5);
+}
+textarea {
+  height: 10rem;
+  resize: vertical;
+}
+
+// Full page styles
+.page-wrap {
+  width: 95%;
+  margin: 0 auto;
+  min-height: 100%;
+  margin-bottom: -80px; 
+  &:after {
+    content: "";
+    display: block;
+    height: 80px; 
   }
+  a {
+    color: $green;
+    text-decoration: none;
+    &:hover {
+      color: $darkGreen;
+    }
+  }
+}
+.site-header {
+  padding: 40px 0 20px;
+  border-bottom: 3px solid $green;
+  @include font-logo;
+  font-size: 2em;  
+  a {
+    color: black;
+  }
+}
+.site-content {
+  @include clearEl;
+  width: 80%;
+  margin: 30px auto 0;
+}
+
+.main-nav {
+  width: 30%;
+  float: left;
+  margin-top: 100px;
+  li {
+    text-decoration: none;
+    list-style: none;
+    margin: 10px 0;
+    @include font-bold;
+  }
+}
+
+.site-page {
+  width: 60%;
+  float: left;
+  margin-left: 10%;
+}
+
+.site-footer {
+  height: 80px; 
   p {
-    color: green;
-    // background-color: yellow;
-    // font-family: Tahoma;
+    width: 300px;
+    margin: 20px auto 0;
+
   }
 }

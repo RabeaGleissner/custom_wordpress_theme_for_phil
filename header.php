@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php bloginfo( 'name' ) ?></title>
      
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet' type='text/css'>
     <!-- <link rel="shortcut icon" href="<?php #echo get_template_directory_uri(); ?>/assets/images/favicon.png" /> -->
     <?php wp_head(); ?>
   </head>
-  <div class="page-wrapper">
+  <body>
+  <div class="page-wrap">
     <header class="site-header">
-       <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => 'nav', 'container_class' => 'site-nav', 'menu_class' => 'menu' ) ); ?>
+       <div><a href="/">Philip Gleissner</a></div>
     </header>
     <main class="site-content">

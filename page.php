@@ -1,5 +1,7 @@
 <?php the_post(); ?>
 <?php get_header(); ?>
+<?php get_sidebar() ?>
+
 <article class="site-page post-content">
   <h1><?php the_title(); ?></h1>
   <?php

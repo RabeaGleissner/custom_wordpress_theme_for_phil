@@ -1,0 +1,28 @@
+@mixin clearEl {
+  &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+}
+
+@mixin font {
+  font: {
+    family: 'Arimo', sans-serif;
+    weight: 400;
+  }
+}
+
+@mixin font-bold {
+  font: {
+    family: 'Arimo', sans-serif;
+    weight: 700;
+  }
+}
+
+@mixin font-logo {
+  font-family: 'Baumans', cursive;
+}
+
+$green: #068481;
+$darkGreen: #174038;
