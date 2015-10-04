@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php get_template_part( 'partials/topnav' ); ?>
+
 <h1 class="index">All blog posts</h1>
 <div class="flex-box">
   <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>

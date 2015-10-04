@@ -73,7 +73,7 @@ textarea {
   resize: vertical;
 }
 
-// Full page styles
+// Generic page styles
 .page-wrap {
   width: 95%;
   margin: 0 auto;
@@ -106,8 +106,37 @@ textarea {
   width: 80%;
   margin: 30px auto 0;
 }
+.menu {
+  font-size: 1.2em;
+}
+//Top nav
+.top-nav {
+    position: absolute;
+    top: 50px;
+    left: 310px;
+  ul {
+    padding: 0 0 0 100px;
+    margin: 0;
+    // border-left: 3px solid $green;
+    li {
+      display: inline-block;
+      list-style: none;
+      padding: 0 20px 0;
+      border-right: 1px solid $green;
 
-.main-nav {
+      &:last-child {
+        border: none;
+      }
+      &:hover {
+
+      }
+
+    }
+  }
+}
+
+// Hompeage styling
+.sidebar-nav {
   width: 30%;
   float: left;
   margin-top: 100px;
@@ -119,12 +148,15 @@ textarea {
   }
 }
 
-.site-page {
+.home-page {
   width: 60%;
   float: left;
   margin-left: 10%;
 }
 
+
+
+// Footer
 .site-footer {
   height: 80px; 
   p {

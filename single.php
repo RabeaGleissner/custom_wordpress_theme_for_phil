@@ -1,5 +1,7 @@
 <?php get_header() ?>
 <?php the_post() ?>
+<?php get_template_part( 'partials/topnav' ); ?>
+
 
 <article class="single-post">
   <div class="single-post-sidebar">

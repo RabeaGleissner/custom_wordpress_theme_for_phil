@@ -1,8 +1,14 @@
+<?php
+/*
+Template Name: Homepage
+*/
+?>
+
 <?php the_post(); ?>
 <?php get_header(); ?>
-<?php get_template_part( 'partials/topnav' ); ?>
+<?php get_sidebar() ?>
 
-<article class="site-page post-content">
+<article class="home-page site-content">
   <h1><?php the_title(); ?></h1>
   <?php
   if ( has_post_thumbnail() ) {
