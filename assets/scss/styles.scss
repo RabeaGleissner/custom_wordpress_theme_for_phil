@@ -19,7 +19,7 @@ img {
 }
 
 body {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.25;
   @include font;
   color: black;
@@ -78,7 +78,7 @@ textarea {
   width: 95%;
   margin: 0 auto;
   min-height: 100%;
-  margin-bottom: -80px; 
+  margin-bottom: -70px; 
   &:after {
     content: "";
     display: block;
@@ -97,7 +97,7 @@ textarea {
   border-bottom: 3px solid $green;
   margin-bottom: 50px;
   @include font-logo;
-  font-size: 2em;  
+  font-size: 2rem;  
   a {
     color: black;
     -webkit-animation: fadeInDown .8s;
@@ -105,14 +105,17 @@ textarea {
   }
 }
 
-
 .site-content {
   @include clearEl;
   width: 80%;
-  margin: 30px auto 0;
+  margin: 30px auto 20px;
+}
+
+.site-content.homepage {
+  width: 90%;
 }
 .menu {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 //Top nav
 .top-nav {
@@ -215,7 +218,7 @@ textarea {
 
 // Hompeage styling
 .sidebar-nav {
-  width: 30%;
+  width: 38%;
   float: left;
   margin-top: 100px;
   li {
@@ -227,18 +230,68 @@ textarea {
 }
 
 .home-page {
-  width: 60%;
+  width: 52%;
   float: left;
   margin-left: 10%;
+}
+
+.blog-posts {
+  width: 80%;
+  .post {
+    margin-bottom: 40px;
+  }
+}
+.post-header {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.pagination {
+  margin-top: 40px;
+  margin-left: 44%;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+}
+
+// Single post styling
+.single-post-categories {
+  width: 23%;
+  float: right;
+  margin-top: 50px;
+  margin-left: 20px;
+  background-color: #fafafa;
+  padding: 15px;
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(23,64,56,1);
+  // -moz-box-shadow: 7px 7px 7px -5px rgba(23,64,56,1);
+  // box-shadow: 7px 7px 7px -5px rgba(23,64,56,1);
+}
+
+.single-post-content {
+  width: 70%;
+  float: left;
+}
+
+.post-categories {
+  list-style-type: disc;
+  padding: 0;
+}
+
+.site-archive-title {
+  margin-bottom: 40px;
 }
 
 
 // Footer
 .site-footer {
-  height: 80px; 
+  height: 70px; 
   p {
-    width: 300px;
+    width: 277px;
     margin: 20px auto 0;
+    border-top: 1px solid grey;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 
   }
 }

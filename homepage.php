@@ -6,7 +6,9 @@ Template Name: Homepage
 
 <?php the_post(); ?>
 <?php get_header(); ?>
-<?php get_sidebar() ?>
+<nav class="sidebar-nav">
+  <?php get_template_part( 'partials/nav' ); ?>
+</nav>
 
 <article class="home-page site-content">
   <h1><?php the_title(); ?></h1>
