@@ -20,12 +20,15 @@ function sidebar_widgets_init() {
     'after_title' => '</h2>',
   ) );
 }
+
+function styles_scripts() {
+  wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/styles.css' );
+  wp_enqueue_style( 'normalise', get_template_directory_uri() . '/assets/css/normalize.css' );
+}
+add_action( 'wp_enqueue_scripts', 'styles_scripts' );
+
 add_action( 'sidebar_widgets_init', 'theme_enqueue_scripts' );
 
 // Create the main navigation menu
 register_nav_menu( 'main', 'Main Menu' );
-
-// Add custom CSS
-wp_enqueue_style( 'normalise', get_template_directory_uri() . '/assets/css/normalize.css' );
-wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/styles.css' );
 ?>
