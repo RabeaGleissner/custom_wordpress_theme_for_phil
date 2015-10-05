@@ -9,7 +9,8 @@
   <article class="post">
     <a href="<?php the_permalink() ?>">
       <header class="post-header">
-        <h1 class="post-title"><?php the_title() ?></h1>
+        <h1><?php the_title() ?></h1>
+        <span class="date"><?php the_date() ?></span>
       </header>
       <!--<?php #$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' ) ?>
       <img src="<?php #echo $image[0] ?>" alt="photo of <?php the_title_attribute() ?>"> -->

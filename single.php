@@ -22,9 +22,14 @@
   <div class="single-post-content">
     <header class="post-header">
       <h1 class="post-title"><?php the_title() ?></h1>
+      <p class="date"><?php the_date() ?></p>
     </header>
     <div class="single-post-entry-content">
       <?php the_content() ?>
+    </div>
+    <div class="next-previous-link">
+      <p class="previous"><?php previous_post_link(); ?></p> 
+      <p class="next"><?php next_post_link(); ?></p>
     </div>
   </div>
 </article>

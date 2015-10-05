@@ -12,11 +12,12 @@ Template Name: Homepage
 
 <article class="home-page site-content">
   <h1><?php the_title(); ?></h1>
-  <?php
+<!--   <?php
   if ( has_post_thumbnail() ) {
     the_post_thumbnail();
   }
-  ?>
+  ?> -->
+  <!-- <img src="http://www.fillmurray.com/300/200" alt="placeholder"> -->
   <?php the_content(); ?>
 </article>
 <?php get_footer(); ?>

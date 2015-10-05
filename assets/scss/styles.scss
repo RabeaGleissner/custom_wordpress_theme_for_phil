@@ -244,6 +244,7 @@ textarea {
 .post-header {
   h1 {
     font-size: 2rem;
+    margin-bottom: 0.7rem;
   }
 }
 
@@ -263,8 +264,11 @@ textarea {
   background-color: #fafafa;
   padding: 15px;
   -webkit-box-shadow: 5px 5px 5px -5px rgba(23,64,56,1);
-  // -moz-box-shadow: 7px 7px 7px -5px rgba(23,64,56,1);
-  // box-shadow: 7px 7px 7px -5px rgba(23,64,56,1);
+  -moz-box-shadow: 7px 7px 7px -5px rgba(23,64,56,1);
+  box-shadow: 7px 7px 7px -5px rgba(23,64,56,1);
+  h4 {
+    margin: 0 0 0.5rem;
+  }
 }
 
 .single-post-content {
@@ -276,6 +280,21 @@ textarea {
   list-style-type: disc;
   padding: 0;
   padding-left: 15px;
+}
+
+.next-previous-link {
+  @include clearEl;
+  margin-top: 40px;
+  p {
+    font-size: 1.1rem;
+  }
+  .previous {
+    float: left;
+  }
+  .next {
+    float: right;
+    margin-top: 6px;
+  }
 }
 
 .site-archive-title {
@@ -296,6 +315,22 @@ textarea {
 
   }
 }
+
+@media only screen and (max-width: 960px) {
+.top-nav {
+    left: 210px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+.page-wrap {
+    width: 1215px;
+  }
+.top-nav {
+    left: 450px;
+  }
+}
+
 
 // Keyframe animations
 
