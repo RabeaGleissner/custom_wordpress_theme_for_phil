@@ -108,7 +108,7 @@ textarea {
 .site-content {
   @include clearEl;
   width: 80%;
-  margin: 30px auto 20px;
+  margin: 0 auto 20px;
 }
 
 .site-content.homepage {
@@ -275,6 +275,7 @@ textarea {
 .post-categories {
   list-style-type: disc;
   padding: 0;
+  padding-left: 15px;
 }
 
 .site-archive-title {
