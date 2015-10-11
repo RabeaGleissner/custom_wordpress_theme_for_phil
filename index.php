@@ -3,7 +3,6 @@
   <?php get_template_part( 'partials/nav' ); ?>
 </nav>
 
-<h1 class="index">Blog</h1>
 <div class="flex-box blog-posts">
   <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
   <article class="post">

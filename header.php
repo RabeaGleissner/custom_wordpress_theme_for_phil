@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php bloginfo( 'name' ) ?></title>
-     
-    <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet' type='text/css'>
+
     <!-- <link rel="shortcut icon" href="<?php #echo get_template_directory_uri(); ?>/assets/images/favicon.png" /> -->
     <?php wp_head(); ?>
   </head>
