@@ -12,6 +12,9 @@
   <body>
   <div class="page-wrap">
     <header class="site-header">
-       <div><a href="/">Philip Gleissner</a></div>
+       <div class="logo"><a href="/">Philip Gleissner</a></div>
+       <nav class="top-nav">
+         <?php get_template_part( 'partials/nav' ); ?>
+       </nav>
     </header>
     <main class="site-content">

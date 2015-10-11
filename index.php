@@ -1,8 +1,4 @@
 <?php get_header(); ?>
-<nav class="top-nav">
-  <?php get_template_part( 'partials/nav' ); ?>
-</nav>
-
 <div class="flex-box blog-posts">
   <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
   <article class="post">
