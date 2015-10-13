@@ -89,15 +89,15 @@ textarea {
   }
 }
 .site-header {
-  padding: 40px 0 30px;
+  padding: 20px 0 40px;
   border-bottom: 3px solid $green;
   margin-bottom: 30px;
   @include font-logo;
-  height: 80px;
+  height: 70px;
   .logo {
     float: left;
     margin-left: 10%;
-    font-size: 1.4em;
+    font-size: 1.6em;
    a {
        color: black;
        -webkit-animation: fadeInDown .8s;
@@ -172,13 +172,21 @@ textarea {
     }
   }
 }
-
+.blog-overview-container {
+  @include clearEl;
+}
 .blog-posts {
-  width: 80%;
+  width: 74%;
+  float: left;
   .post {
     margin-bottom: 40px;
+    img {
+      height: auto;
+      width: 100%;
+    }
   }
 }
+
 .post-header {
   h1 {
     font-size: 2em;
@@ -194,7 +202,7 @@ textarea {
 }
 
 // Single post styling
-.single-post-categories {
+.categories-tags {
   width: 23%;
   float: right;
   margin-top: 50px;

@@ -3,7 +3,7 @@
 <article class="single-post">
    <!-- <?php# $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' ) ?>
     <img src="<?php #echo $image[0] ?>" alt="photo of <?php the_title_attribute() ?>">-->
-    <div class="single-post-categories">
+    <div class="categories-tags">
       <?php
         if ( has_category() ) {
           echo '<h4>Category:</h4>';
