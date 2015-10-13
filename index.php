@@ -24,7 +24,7 @@
     if ($categories) {
       echo '<ul>';
       foreach ($categories as $category) {
-        echo '<li><a href="' . get_tag_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a></li>';
+        echo '<li><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a></li>';
         }
       echo '</ul>';
     }

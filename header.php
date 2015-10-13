@@ -13,7 +13,7 @@
   <div class="page-wrap">
     <header class="site-header">
        <div class="logo"><a href="/">Philip Gleissner</a></div>
-       <nav class="top-nav">
+       <nav class="top-nav" id='nav'>
          <?php get_template_part( 'partials/nav' ); ?>
        </nav>
     </header>

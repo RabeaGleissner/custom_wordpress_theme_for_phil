@@ -16,6 +16,14 @@
         s.parentNode.insertBefore(wf, s);
       })();
     </script>
+    <script type='text/javascript'>
+      var mobileNav = document.getElementById('nav')
+      mobileNav.addEventListener('click', function(ev) {
+        ev.preventDefault();
+        console.log('hello')
+        mobileNav.classList.toggle('expand')
+      }, false);
+    </script>
 
     </body>
 </html>

@@ -14,6 +14,10 @@ a:hover img {
   opacity: 0.8;
 }
 
+img {
+  width: 100%;
+}
+
 body {
   font-size: 16px;
   line-height: 1.25;
@@ -115,6 +119,8 @@ textarea {
 .homepage {
   img {
     float: left;
+    height: auto;
+    max-width: 300px;
   }
   .intro-text {
     float: right;
@@ -182,7 +188,7 @@ textarea {
     margin-bottom: 40px;
     img {
       height: auto;
-      width: 100%;
+      margin-top: 20px;
     }
   }
 }
@@ -262,8 +268,18 @@ textarea {
   }
 }
 
-@media only screen and (max-width: 960px) {
-
+@media only screen and (max-width: 1000px) {
+  .homepage {
+    img {
+      float: none;
+      display: block;
+      margin: 30px auto;
+    }
+    .intro-text {
+      float: none;
+      width: 100%;
+    }
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -279,7 +295,7 @@ textarea {
       background-color: white;
       padding-left: 0;
       li {
-        display: block;
+        // display: block;
         border-right: none;
         display: none;
         a {
@@ -288,7 +304,13 @@ textarea {
         }
       }
     }
+    &.expand {
+      li {
+        display:block;
+      }
+    }
   }
+
 }
 
 
