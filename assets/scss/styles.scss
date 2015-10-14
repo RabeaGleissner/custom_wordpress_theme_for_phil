@@ -135,6 +135,9 @@ textarea {
   width: 701px;
   float: right;
   margin-top: 3px;
+  button {
+    display: none;
+  }
 
   ul {
     padding: 0 0 0 0;
@@ -284,20 +287,24 @@ textarea {
 
 @media only screen and (max-width: 1100px) {
   .top-nav {
-    background-color: red;
-    width: 285px;
-    ul:before {
-      content:' Menu \2630'; 
-      cursor: pointer;
-      margin-left: 20px;
+    width: 245px;
+    position: fixed;
+    right: 10px;
+    button {
+      display: block;
     }
     ul {
       background-color: white;
       padding-left: 0;
+      margin-top: 40px;
       li {
         // display: block;
         border-right: none;
         display: none;
+        max-width: 170px;
+        &:first-child {
+          margin-top: 20px;
+        }
         a {
           border-bottom: 1px solid $green;
           padding: 10px 0;
@@ -305,8 +312,63 @@ textarea {
       }
     }
     &.expand {
+      ul {
+        padding-top: 10px;
+      }
+      span {
+        transform: rotate(90deg);
+      }
       li {
         display:block;
+      }
+    }
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    right: 10%;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 70px;
+    height: 67px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    background-color: white;
+    &:focus {
+      outline: none;
+    }
+    span {
+      display: block;
+      position: absolute;
+      top: 35px;
+      left: 18px;
+      right: 18px;
+      height: 5px;
+      background: black;
+      transition: transform 0.3s;
+      &::before, &::after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: black;
+        content: "";
+      }
+      &::before {
+        top: -10px;
+      }
+      &::after {
+        bottom: -10px;
       }
     }
   }
