@@ -14,9 +14,12 @@
     <header class="site-header">
        <div class="logo"><a href="/">Philip Gleissner</a></div>
        <nav class="top-nav" id='nav'>
-         <button class="hamburger">
-           <span>toggle menu</span>
-         </button>
+        <a href="#" id='nav-click'>
+          <div class='menu-word'>Menu</div>
+          <button class="hamburger" id='hamburger'>
+            <span>toggle menu</span>
+          </button>
+         </a>
          <?php get_template_part( 'partials/nav' ); ?>
        </nav>
     </header>

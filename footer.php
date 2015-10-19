@@ -18,9 +18,10 @@
     </script>
     <script type='text/javascript'>
       var mobileNav = document.getElementById('nav')
-      mobileNav.addEventListener('click', function(ev) {
+      var hamburger = document.getElementById('hamburger')
+      document.getElementById('nav-click').addEventListener('click', function(ev) {
         ev.preventDefault();
-        mobileNav.classList.toggle('expand')
+        mobileNav.classList.toggle('expand');
       }, false);
     </script>
 
