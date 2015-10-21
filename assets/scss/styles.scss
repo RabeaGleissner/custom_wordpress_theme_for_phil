@@ -8,7 +8,7 @@ html {
   height: 100%;
 }
 a, a img {
-  transition: 0.3s;
+  transition: 0.2s;
 }
 a:hover img {
   opacity: 0.8;
@@ -40,40 +40,7 @@ h2 { font-size: 1.4em; }
 form p {
   position: relative;
 }
-label {
-  display: block;
-  margin-bottom: 0.625em;
-  color: #666;
-  font-weight: 100;
-  vertical-align: top;
-}
-label em {
-  color: #ac6f66;
-}
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  margin-bottom: 0.3125em;
-  padding: 0.625em;
-  border: 1px solid #ccc;
-
-  -webkit-transition: 0.3s;
-          transition: 0.3s;
-}
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  outline: 0;
-  box-shadow: 0 0 0.625em rgba(172, 111, 102, 0.5);
-}
-textarea {
-  height: 10em;
-  resize: vertical;
-}
-
-// Generic page styles
 .page-wrap {
   width: 95%;
   margin: 0 auto;
@@ -272,27 +239,11 @@ textarea {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .homepage {
-    img {
-      float: none;
-      display: block;
-      margin: 30px auto;
-    }
-    .intro-text {
-      float: none;
-      width: 100%;
-    } 
-  }
-  .categories-tags {
-    float: none;
-    margin-left: 0;
-  }
-  .blog-posts {
-    float: none;
-  }
-  .single-post-content {
-    float: none;
+
+
+@media only screen and (max-width: 1205px) {
+.blog-posts {
+    width: 64%;
   }
 }
 
@@ -313,12 +264,19 @@ textarea {
     ul {
       background-color: $ivory2;
       padding-left: 0;
-      margin-top: 16px;
+      margin-top: 20px;
+      height: 100%;
+      -webkit-transform: translateX(103%);
+      -ms-transform: translateX(103%);
+      transform: translateX(103%);
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out;
       li {
-        // display: block;
+        display: block;
         border-right: none;
-        display: none;
-        max-width: 170px;
+        // display: none;
+        // max-width: 170px;
+        width: 300px;
         text-align: center;
         margin: 0 auto;
         &:first-child {
@@ -342,7 +300,10 @@ textarea {
     }
     &.expand {
       ul {
-        padding-top: 10px;
+        float: right;
+        -webkit-transform: translateX(-5%);
+        -ms-transform: translateX(-5%);
+        transform: translateX(-5%);
       }
       span {
         transform: rotate(90deg);
@@ -351,6 +312,14 @@ textarea {
         display:block;
       }
     }
+  }
+
+  .site-content.inactive, .site-footer.inactive {
+    -webkit-transform: translateX(-40%);
+    -ms-transform: translateX(-40%);
+    transform: translateX(-40%);
+    -webkit-transition: transform .3s ease-out;
+    transition: transform .3s ease-out;
   }
 
   .hamburger {
@@ -401,16 +370,86 @@ textarea {
       }
     }
   }
-
 }
 
+@media only screen and (max-width: 1000px) {
+  .homepage {
+    img {
+      float: none;
+      display: block;
+      margin: 30px auto;
+    }
+    .intro-text {
+      float: none;
+      width: 100%;
+    } 
+  }
+  .categories-tags {
+    float: none;
+    margin-left: 0;
+  }
+  .blog-posts {
+    float: none;
+    width: 90%;
+  }
+  .single-post-content {
+    float: none;
+  }
+}
 
+@media only screen and (max-width: 960px) {
+  .top-nav.expand {
+    ul {
+      -webkit-transform: translateX(-4%);
+      -ms-transform: translateX(-4%);
+      transform: translateX(-4%);
+    }
+  }
+}
+@media only screen and (max-width: 785px) {
+  .top-nav.expand {
+    ul {
+      -webkit-transform: translateX(-2%);
+      -ms-transform: translateX(-2%);
+      transform: translateX(-2%);
+    }
+  }
+  .site-content.inactive, .site-footer.inactive {
+    -webkit-transform: translateX(-60%);
+    -ms-transform: translateX(-60%);
+    transform: translateX(-60%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .top-nav.expand {
+    width: 100%;
+    .menu-word {
+      margin-left: 380px;
+    }
+    ul {
+      -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      transform: translateX(0%);
+      width: 96%;
+      margin-left: auto;
+      margin-right: auto;
+      li {
+        width: 100%;
+      }
+    }
+  }
+  .site-content.inactive, .site-footer.inactive {
+    -webkit-transform: translateX(-120%);
+    -ms-transform: translateX(-120%);
+    transform: translateX(-120%);
+  }
+}
 
 @media only screen and (min-width: 1280px) {
 .page-wrap {
     width: 1215px;
   }
-
 }
 
 

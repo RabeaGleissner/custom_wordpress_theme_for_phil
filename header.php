@@ -23,4 +23,4 @@
          <?php get_template_part( 'partials/nav' ); ?>
        </nav>
     </header>
-    <main class="site-content">
+    <main class="site-content" id="main-content">
