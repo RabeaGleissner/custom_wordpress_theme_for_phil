@@ -24,6 +24,7 @@ body {
   @include font;
   color: black;
   height: 100%;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -52,16 +53,16 @@ form p {
     height: 80px; 
   }
   a {
-    color: $green;
+    color: $maroon;
     text-decoration: none;
     &:hover {
-      color: $darkGreen;
+      color: $darkMaroon;
     }
   }
 }
 .site-header {
   padding: 20px 0 40px;
-  border-bottom: 2px solid $green;
+  border-bottom: 2px solid $maroon;
   margin-bottom: 30px;
   @include font-logo;
   height: 70px;
@@ -117,7 +118,7 @@ form p {
       list-style: none;
       padding: 0 20px 0;
       transition: padding-bottom 1s;
-      border-right: 1px solid $green;
+      border-right: 1px solid $maroon;
       line-height: 20px;
 
       &:last-child {
@@ -151,10 +152,10 @@ form p {
     }
   }
 }
-.blog-overview-container {
+.blog-overview-container, .site-content {
   @include clearEl;
 }
-.blog-posts {
+.blog-posts, .site-archive{
   width: 74%;
   float: left;
   .post {
@@ -168,7 +169,6 @@ form p {
 
 .post-header {
   h1 {
-    font-size: 2em;
     margin-bottom: 0.7em;
   }
 }
@@ -239,10 +239,8 @@ form p {
   }
 }
 
-
-
 @media only screen and (max-width: 1205px) {
-.blog-posts {
+.blog-posts, .site-archive {
     width: 64%;
   }
 }
@@ -262,7 +260,7 @@ form p {
       display: block;
     }
     ul {
-      background-color: $ivory2;
+      background-color: $grey;
       padding-left: 0;
       margin-top: 20px;
       height: 100%;
@@ -289,7 +287,7 @@ form p {
           }
         }
         a {
-          border-bottom: 1px solid $green;
+          border-bottom: 1px solid $maroon;
           padding: 10px 0;
         }
         a:hover {
@@ -320,6 +318,15 @@ form p {
     transform: translateX(-40%);
     -webkit-transition: transform .3s ease-out;
     transition: transform .3s ease-out;
+  }
+
+  .single-post-content {
+    width: 68%;
+  }
+  .single-post {
+    .categories-tags {
+      margin-right: -40px;
+    }
   }
 
   .hamburger {
@@ -384,16 +391,23 @@ form p {
       width: 100%;
     } 
   }
-  .categories-tags {
+  .blog-overview-container {
+    .categories-tags {
+      float: none;
+      margin-left: 0;
+    }
+  }
+  .archive-page-categories {
     float: none;
     margin-left: 0;
   }
-  .blog-posts {
+
+  .blog-posts, .site-archive {
     float: none;
     width: 90%;
   }
   .single-post-content {
-    float: none;
+    width: 65%;
   }
 }
 
@@ -406,6 +420,20 @@ form p {
     }
   }
 }
+@media only screen and (max-width: 900px) {
+  .single-post-content {
+    float: none;
+    width: 100%;
+  }
+  .single-post {
+    .categories-tags {
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
 @media only screen and (max-width: 785px) {
   .top-nav.expand {
     ul {
@@ -443,6 +471,55 @@ form p {
     -webkit-transform: translateX(-120%);
     -ms-transform: translateX(-120%);
     transform: translateX(-120%);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1, h2, h3, h4 {
+    margin: 0 0 1.1em;
+  }
+  p {
+    margin: 0 0 1.1em;
+  }
+  .post-header {
+    h1 {
+      font-size: 1.7em;
+    }
+  }
+  .site-content {
+    h1 { 
+      font-size: 1.7em;
+    }
+    h2 { font-size: 1.4em; }
+  }
+  .top-nav {
+    .menu-word {
+      display: none;
+    }
+    ul {
+      margin-top: 47px;
+    }
+  }
+}
+@media only screen and (min-width: 1100px) {
+  body {
+    font-size: 18px;
+  }
+  .top-nav {
+    width: 663px;
+    ul {
+      li {
+        padding: 0 10px 0;
+      }
+    }
+  }
+  .categories-tags {
+    width: 231px;
+  }
+  .site-footer {
+    p {
+      width: 308px;
+    }
   }
 }
 

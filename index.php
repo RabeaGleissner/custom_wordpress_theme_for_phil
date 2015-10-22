@@ -19,7 +19,7 @@
     </article><?php endwhile; endif; ?>
   </div>
   <aside class='categories-tags index-page'>
-    <h3>All categories</h3>
+    <h3>Categories</h3>
     <?php $categories = get_categories();
     if ($categories) {
       echo '<ul>';

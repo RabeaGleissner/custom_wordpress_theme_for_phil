@@ -17,7 +17,6 @@
   </aside>
 <?php endif ?>
 <div class="site-archive">
-
   <?php if ( have_posts() ): while ( have_posts() ): the_post() ?>
 
     <article class="post">
@@ -29,6 +28,7 @@
         <img src="<?php #echo $image[0] ?>" alt="photo of <?php the_title_attribute() ?>"> -->
       </a>
       <p class="teaser"><?php the_excerpt(); ?></p>
+      <a href="<?php the_permalink() ?>">Read more...</a>
     </article>
   <?php endwhile ?>
 
@@ -39,7 +39,26 @@
     <h2>No posts found :( </h2>
 
   <?php endif ?>
-
 </div>
+<aside class='categories-tags archive-page-categories'>
+  <h3>Categories</h3>
+  <?php $categories = get_categories();
+  if ($categories) {
+    echo '<ul>';
+    foreach ($categories as $category) {
+      echo '<li><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a></li>';
+      }
+    echo '</ul>';
+  }
+  ?>
+  <!-- <h4>All tags</h4> -->
+  <?php /*$tags = get_tags();
+    if ($tags) {
+      foreach ($tags as $tag) {
+        echo '<a href="' . get_tag_link( $tag->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $tag->name ) . '" ' . '>' . $tag->name.'</a> ';
+        }
+    }*/
+  ?> 
+</aside>
 
 <?php get_footer() ?>
