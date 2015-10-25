@@ -15,7 +15,7 @@ a:hover img {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -46,11 +46,12 @@ form p {
   width: 95%;
   margin: 0 auto;
   min-height: 100%;
-  margin-bottom: -70px; 
+  margin-bottom: -105px;
+  overflow-x: hidden;
   &:after {
     content: "";
     display: block;
-    height: 80px; 
+    height: 80px;
   }
   a {
     color: $maroon;
@@ -64,7 +65,6 @@ form p {
   padding: 20px 0 40px;
   border-bottom: 2px solid $maroon;
   margin-bottom: 30px;
-  @include font-logo;
   height: 70px;
   .logo {
     float: left;
@@ -85,6 +85,10 @@ form p {
 }
 
 .homepage {
+  padding-top: 30px;
+  h1 {
+    display: none;
+  }
   img {
     float: left;
     height: auto;
@@ -174,9 +178,9 @@ form p {
 }
 
 .pagination {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 44%;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   font-size: 1.2em;
 }
 
@@ -209,14 +213,14 @@ form p {
   @include clearEl;
   margin-top: 40px;
   p {
-    font-size: 1.1em;
+    font-size: 1em;
+    max-width: 300px;
   }
   .previous {
     float: left;
   }
   .next {
     float: right;
-    margin-top: 6px;
   }
 }
 
@@ -227,18 +231,39 @@ form p {
 
 // Footer
 .site-footer {
-  height: 70px; 
+  text-align: center;
+  height: 105px;
+  border-top: 1px solid grey;
+  width: 380px;
+  margin: 40px auto 0;
   p {
-    width: 277px;
-    margin: 20px auto 0;
-    border-top: 1px solid grey;
-    padding-top: 10px;
-    padding-left: 20px;
+    width: 231px;
+    margin: 20px auto 12px;
+    padding: 6px 20px 0 10px;
+    float: left;
+  }
+  ul {
+    margin-bottom: 10px;
+    margin-top: 8px;
+    float: right;
+    padding-left: 0;
     padding-right: 20px;
-
+  }
+  li {
+    display: inline-block;
+    list-style: none;
+  }
+  img {
+    display: inline-block;
+    width: 40px;
   }
 }
 
+@media only screen and (max-width: 1270px) {
+ .blog-posts {
+   width: 72%;
+ }
+}
 @media only screen and (max-width: 1205px) {
 .blog-posts, .site-archive {
     width: 64%;
@@ -311,7 +336,6 @@ form p {
       }
     }
   }
-
   .site-content.inactive, .site-footer.inactive {
     -webkit-transform: translateX(-40%);
     -ms-transform: translateX(-40%);
@@ -319,7 +343,6 @@ form p {
     -webkit-transition: transform .3s ease-out;
     transition: transform .3s ease-out;
   }
-
   .single-post-content {
     width: 68%;
   }
@@ -447,6 +470,28 @@ form p {
     -ms-transform: translateX(-60%);
     transform: translateX(-60%);
   }
+  .next-previous-link {
+    .previous {
+      a {
+        span {
+          display: none;
+        }
+        &:after {
+          content: "Previous post";
+        }
+      }
+    }
+    .next {
+      a {
+        span {
+          display: none;
+        }
+        &:after {
+          content: "Next post >>";
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -481,6 +526,11 @@ form p {
   p {
     margin: 0 0 1.1em;
   }
+  .homepage {
+    img {
+      max-width: 250px;
+    }
+  }
   .post-header {
     h1 {
       font-size: 1.7em;
@@ -500,6 +550,19 @@ form p {
       margin-top: 47px;
     }
   }
+  .page-wrap {
+    margin-bottom: -110px;
+  }
+  .site-footer{
+    width: 100%;
+    height: 130px;
+    p {
+      float: none;
+    }
+    ul {
+      float: none;
+    }
+  }
 }
 @media only screen and (min-width: 1100px) {
   body {
@@ -517,9 +580,20 @@ form p {
     width: 231px;
   }
   .site-footer {
+    width: 450px;
     p {
-      width: 308px;
+      width: 245px;
+      margin-top: 12px;
+      margin-left: 25px;
     }
+    ul {
+      margin-right: 25px;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+.site-archive {
+    width: 63%;
   }
 }
 
