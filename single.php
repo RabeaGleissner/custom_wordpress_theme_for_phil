@@ -12,8 +12,19 @@
       <?php the_content() ?>
     </div>
     <div class="next-previous-link">
-      <p class="previous"><?php previous_post_link(); ?></p> 
-      <p class="next"><?php next_post_link(); ?></p>
+      <p class="previous">
+        <?php
+        $prev_post = get_previous_post();
+        if (!empty( $prev_post )): ?>
+          <a href="<?php echo get_permalink( $prev_post->ID ); ?>">&lt;&lt; <span><?php echo $prev_post->post_title; ?></span></a>
+        <?php endif; ?>
+      </p> 
+      <p class="next"> <?php
+      $next_post = get_next_post();
+      if (!empty( $next_post )): ?>
+        <a href="<?php echo get_permalink( $next_post->ID ); ?>"><span><?php echo $next_post->post_title; ?>  &gt;&gt;</span></a>
+      <?php endif; ?>
+      </p>
     </div>
   </div>
   <aside class="categories-tags">
