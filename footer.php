@@ -38,8 +38,6 @@
       document.getElementById('nav-click').addEventListener('click', function(ev) {
         ev.preventDefault();
         mobileNav.classList.toggle('expand');
-        document.getElementById('main-content').classList.toggle('inactive');
-        document.getElementById('footer').classList.toggle('inactive');
       }, false);
     </script>
     </body>
