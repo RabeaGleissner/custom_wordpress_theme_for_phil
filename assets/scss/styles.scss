@@ -467,11 +467,16 @@ form p {
 }
 
 @media only screen and (max-width: 600px) {
+  .top-nav {
+    .menu-word {
+      display: none;
+    }
+    .hamburger {
+      right: 8px;
+    }
+  }
   .top-nav.expand {
     width: 100%;
-    .menu-word {
-      margin-left: 380px;
-    }
     ul {
       li {
         width: 100%;
@@ -503,14 +508,6 @@ form p {
     }
     h2 { font-size: 1.4em; }
   }
-  .top-nav {
-    .menu-word {
-      display: none;
-    }
-    ul {
-      margin-top: 47px;
-    }
-  }
   .page-wrap {
     margin-bottom: -110px;
   }
@@ -532,9 +529,6 @@ form p {
     }
     .logo {
       margin-left: 3%;
-    }
-    .hamburger {
-      right: 0;
     }
   }
   .site-content {
