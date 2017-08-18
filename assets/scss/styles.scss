@@ -230,6 +230,12 @@ form p {
   margin-bottom: 40px;
 }
 
+.site-page {
+  .size-large {
+    max-width: none;
+  }
+}
+
 
 // Footer
 .site-footer {
